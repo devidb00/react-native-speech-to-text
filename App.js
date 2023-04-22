@@ -1,8 +1,10 @@
 import * as React from "react";
 import { Audio } from "expo-av";
 import * as FileSystem from "expo-file-system";
-import { StyleSheet, Button, View } from "react-native";
 import Home from "./screens/Home";
+
+import "react-native-reanimated";
+import "react-native-gesture-handler";
 
 export default function App() {
   const [recording, setRecording] = React.useState();

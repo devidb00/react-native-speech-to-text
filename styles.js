@@ -1,19 +1,20 @@
 import { StyleSheet } from "react-native";
 
+BORDER_RADIUS = 190;
+BACKGROUND_COLOR = "#0A0E1E";
+
 export const styles = StyleSheet.create({
   home: {
     flex: 1,
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "white",
+    backgroundColor: BACKGROUND_COLOR,
   },
-  searchButton: {
-    height: 200,
-    width: 200,
-    borderRadius: 100,
-    backgroundColor: "white",
-    borderWidth: 2,
-    borderColor: "#0C81ED",
+  searchAnimation: {
+    width: BORDER_RADIUS,
+    height: BORDER_RADIUS,
+    borderColor: "white",
+    borderRadius: BORDER_RADIUS,
   },
 });
