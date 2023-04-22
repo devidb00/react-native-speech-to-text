@@ -2,6 +2,7 @@ import * as React from "react";
 import { Audio } from "expo-av";
 import * as FileSystem from "expo-file-system";
 import { StyleSheet, Button, View } from "react-native";
+import Home from "./screens/Home";
 
 export default function App() {
   const [recording, setRecording] = React.useState();
@@ -52,18 +53,17 @@ export default function App() {
     }
   }
 
-  return (
-    <View style={styles.button}>
-      <Button
-        title={recording ? "Stop Recording" : "Start Recording"}
-        onPress={recording ? stopRecording : startRecording}
-      />
-      <Button title="Play Sound" onPress={() => playSound(sound)} />
-    </View>
-  );
+  return <Home />;
 }
-const styles = StyleSheet.create({
-  button: {
-    margin: 100,
-  },
-});
+
+{
+  /* 
+      <View>
+        <Button
+          title={recording ? "Stop Recording" : "Start Recording"}
+          onPress={recording ? stopRecording : startRecording}
+        />
+        <Button title="Play Sound" onPress={() => playSound(sound)} /> 
+      </View> 
+    */
+}
