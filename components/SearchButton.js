@@ -3,7 +3,7 @@ import { MotiView } from "moti";
 import { styles } from "../styles";
 import { Pressable, View, StyleSheet } from "react-native";
 
-export default function SearchButton({ actionnableButton }) {
+export default function SearchButton({ router, actionnableButton }) {
   const [active, setActive] = actionnableButton;
   return (
     <View>
@@ -27,7 +27,7 @@ export default function SearchButton({ actionnableButton }) {
           />
         ))}
       <Pressable
-        onPress={() => setActive(true)}
+        onPress={() => router.push("/search")}
         style={{
           backgroundColor: "white",
           height: 190,

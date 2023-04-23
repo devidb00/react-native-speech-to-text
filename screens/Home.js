@@ -4,7 +4,7 @@ import { Pressable, View } from "react-native";
 import { AntDesign } from "@expo/vector-icons";
 import SearchButton from "../components/SearchButton";
 
-export default function Home() {
+export default function Home({ router }) {
   const [active, setActive] = React.useState(false);
   return (
     <View style={styles.home}>
@@ -25,7 +25,11 @@ export default function Home() {
           <AntDesign name="close" size={30} color="white" />
         </Pressable>
       )}
-      <SearchButton actionnableButton={[active, setActive]} style={styles} />
+      <SearchButton
+        router={router}
+        actionnableButton={[active, setActive]}
+        style={styles}
+      />
     </View>
   );
 }
